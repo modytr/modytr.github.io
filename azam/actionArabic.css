@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'HeroFont';
+    src: url('hero-2/HeroLight-Bold.otf') format('opentype'),
+        url('hero-2/HeroLight-Light.otf') format('opentype'),
+        url('hero-2/HeroLight-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'HeroFont', sans-serif;
+}
+.div1 {
+    width: 100%;
+}
+
+.logoDiv {
+    float: left;
+    width: 150px;
+    height: 60px;
+}
+
+.headerDiv {
+    width: 100%;
+    height: 70px;
+    border-spacing: 0;
+    background-color: rgb(20, 20, 20);
+}
+
+.optionsDiv {
+    float: inline-end;
+    width: 70%;
+    height: 50px;
+    padding-top: 25px;
+    padding-left: 30px;
+    color: white;
+}
+
+.options {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+    transition-duration: .5s;
+}
+
+.options:hover {
+    background-color: rgba(51, 209, 202, 255);
+    border-radius: 10px;
+}
+
+.sign {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+    background-color: rgba(51, 209, 202, 255);
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-top: 5px;
+    transition-duration: .5s;
+}
+
+.sign:hover {
+    background-color: #141414;
+}
+
+.filmsDiv2 {
+    width: 100%;
+    height: 1100px;
+    border-spacing: 0;
+    background-color: rgb(20, 20, 20);
+    padding-top: 50px;
+}
+
+.moveDiv2 {
+    width: 1400px;
+    height: 1000px;
+    margin-left: 150px;
+}
+
+.imagesDiv2 {
+    width: 250px;
+    height: 330px;
+    border-spacing: 0;
+    background-color: rgb(20, 20, 20);
+    float: left;
+    padding: 5px;
+}
+
+.reduis2 {
+    border-radius: 15px;
+    transition-duration: .5s;
+    width: 250px;
+}
+
+.reduis2:hover {
+    padding: 10px;
+    background-color: #282a2d;
+
+}
+
+.emptyDiv2 {
+    padding-top: 150px;
+    padding: 5px;
+    width: 89%;
+    height: 200px;
+    border-spacing: 0;
+    background-color: #141414;
+    padding-left: 150px;
+    border: 7px solid #141414
+}
+
+.emptyDiv2 {
+    padding-top: 150px;
+    padding: 5px;
+    width: 89%;
+    height: 200px;
+    border-spacing: 0;
+    background-color: #141414;
+    padding-left: 150px;
+    border: 7px solid #141414
+}
+
+.lastDiv {
+    width: 350px;
+    height: 200px;
+    color: rgba(51, 209, 202, 255);
+    float: left;
+    padding-left: 10px;
+}
+
+.a {
+    padding-left: 10px;
+    color: rgba(51, 209, 202, 255);
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+
+.a:hover {
+    background-color: #282a2d;
+}
+
+.submit {
+    background-color: #141414;
+    color: #33d1ca;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 10px;
+    transition-duration: .5s;
+}
+
+.submit:hover {
+    background-color: #282a2d;
+}

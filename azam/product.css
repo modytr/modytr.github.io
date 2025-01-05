@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'HeroFont';
+    src: url('hero-2/HeroLight-Bold.otf') format('opentype'),
+        url('hero-2/HeroLight-Light.otf') format('opentype'),
+        url('hero-2/HeroLight-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'HeroFont', sans-serif;
+}
+
+.productDiv {
+    width: 100%;
+    height: 700px;
+    background-color: #2e2e30;
+    border: 1px solid #2e2e30;
+}
+
+.imageProductImage {
+    float: right;
+    width: 500px;
+    height: 600px;
+    margin-top: 50px;
+    margin-right: 100px;
+    background-image: url(images/imageMovies/squid.3jpg.webp);
+    background-size: 500px 600px;
+    border-radius: 15px;
+}
+
+.productDiv2 {
+    width: 600px;
+    height: 530px;
+    margin-left: 200px;
+    border: 1px solid #2e2e30;
+}
+
+.informationProductDiv {
+    width: 298px;
+    height: 50px;
+    float: left;
+    border-bottom: 1px solid #141414;
+}
+
+.iconProductDiv {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.iconProduct {
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 10px;
+    float: left;
+}
+
+.iconInformation {
+    width: 200px;
+    height: 40px;
+    float: right;
+    margin-right: 50px;
+}
+
+.historyDiv{
+    width: 600px;
+    height: 130px;
+    margin-top: 60px;
+    border-bottom: 1px solid #141414;
+    margin-bottom: 15px;
+}
+
+.pProduct{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.spanProduct{
+    font-weight: normal;
+    color: white;
+    font-size: 15px;
+}
+
+
+.signProduct {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgba(51, 209, 202, 255);
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition-duration: .5s;
+    margin-left: 240px;
+    margin-top: 200px;
+}
+
+.signProduct:hover {
+    background-color: #141414;
+}

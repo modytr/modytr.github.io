@@ -1,0 +1,133 @@
+body{
+    font-family: 'HeroFont', sans-serif;
+}
+@font-face {
+    font-family: 'HeroFont';
+    src: url('hero-2/HeroLight-Bold.otf') format('opentype'),
+        url('hero-2/HeroLight-Light.otf') format('opentype'),
+        url('hero-2/HeroLight-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.emptyDiv2Footer {
+    width: 100%;
+    height: 300px;
+    border-spacing: 0;
+    background-color: #141414;
+    border: 2px solid #282a2d;
+}
+
+.moveDiv2Footer {
+    width: 1200px;
+    height: 260px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.lastDivFooter {
+    width: 350px;
+    height: 250px;
+    color: rgba(51, 209, 202, 255);
+    float: left;
+}
+
+.footerLogoDivFooter {
+    width: 200px;
+    height: 70px;
+}
+
+.footerLogoFooter {
+    width: 200px;
+    height: 70px;
+}
+
+.bigDivFooter {
+    width: 220px;
+    height: 230px;
+    float: left;
+}
+
+.imageDivFooter {
+    width: 30px;
+    height: 50px;
+    float: left;
+}
+
+.imageDivRFooter {
+    width: 170px;
+    height: 50px;
+    float: left;
+}
+
+.img1Footer {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.footerOptionsDivRFooter {
+    width: 100px;
+    height: 230px;
+    float: left;
+    line-height: 40px;
+}
+
+.footerOptionsDivFooter {
+    width: 105px;
+    height: 230px;
+    float: left;
+    line-height: 40px;
+}
+
+.footerOptionsFooter {
+    font-size: 14px;
+    padding: 15px;
+    color: #33d1ca;
+    text-decoration: none;
+}
+
+.footerOptionsFooter:hover {
+    color: rgb(255, 255, 255);
+}
+
+.h2Footer {
+    color: #33d1ca;
+    text-align: center;
+    line-height: 60px;
+}
+
+
+.aFooter {
+    padding-left: 10px;
+    color: rgba(51, 209, 202, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.submitFooter {
+    background-color: #33d1ca;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 100px;
+    transition-duration: .5s;
+}
+
+.submitFooter:hover {
+    background-color: #282a2d;
+}
+
+.emptyDiv{
+    width: 100%;
+    height: 70px;
+    border-spacing: 0;
+    background-color: #282a2d;
+    text-indent: 50px;
+    border: 1px solid #282a2d;
+}

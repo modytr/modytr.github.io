@@ -1,0 +1,200 @@
+
+@font-face {
+    font-family: 'HeroFont';
+    src: url('hero-2/HeroLight-Bold.otf') format('opentype'),
+        url('hero-2/HeroLight-Light.otf') format('opentype'),
+        url('hero-2/HeroLight-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'HeroFont', sans-serif;
+}
+
+.headerDiv{
+    width: 100%;
+    height: 70px;
+    border-spacing: 0;
+    background-color: #33d1ca;
+    border: 1px solid #33d1ca;
+}
+
+.optionsDiv{
+    float: inline-end;
+    width: 70%;
+    height: 50px;
+    padding-top: 25px;
+    color: #141414;
+}
+
+.options{
+    color: #282a2d;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+    transition-duration: .5s;
+}
+
+.options:hover{
+    background-color: #141414;
+    border-radius: 10px;
+}
+
+.sign{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #282a2d;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition-duration: .5s;
+}
+
+.sign:hover{
+    background-color: #141414;
+}
+
+.logoDiv{
+    float: left;
+    width: 150px;
+    height: 60px;
+}
+
+.interfaceImageDiv{
+    width: 100%;
+    height: 700px;
+    border-spacing: 0;
+    background-color: rgb(51, 209, 202);
+    background-image: url(kidsImages/interFace2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #33d1ca;
+}
+
+.inImageDiv{
+    width: 80%;
+    height: 200px;
+    border-spacing: 0;
+    margin-top: 400px;
+    margin-left: 150px;
+    background-color: rgb(51, 209, 202,0.5);
+    border-radius: 15px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.inImage{
+    color : white;
+    
+}
+
+.inImageSpan{
+    color : #282a2d;
+    font-size: 80px;
+    
+}
+
+.inImagesign{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+    background-color: #282a2d;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition-duration: .5s;
+}
+
+.inImagesign:hover{
+    background-color: #141414;
+}
+
+.bodyDiv{
+    width: 100%;
+    height: 70px;
+    border-spacing: 0;
+    background-color: #33d1ca;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.select{
+    text-transform: capitalize;
+    font-size: 15px;
+    background-color: #32373c;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    padding-left: 170px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 3px solid white;
+}
+
+.emptyDiv{
+    width: 100%;
+    height: 70px;
+    border-spacing: 0;
+    background-color: #282a2d;
+    text-indent: 50px;
+    border: 1px solid #282a2d;
+}
+
+.h3{
+    color: rgba(51,209,202,255);
+    font-variant-caps: all-petite-caps;
+    font-size: 25px;
+}
+
+.filmsDiv{
+    width: 100%;
+    height: 550px;
+    border-spacing: 0;
+    background-color: #33d1ca;
+    border: 1px solid #33d1ca;
+}
+
+.moveDiv{
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 1250px;
+    height: 450px;
+}
+
+.imagesDiv{
+    width: 300px;
+    height: 430px;
+    border-spacing: 0;
+    background-color: #33d1ca;
+    float: left;
+    padding: 5px;
+}
+
+.imagesDiv{
+    width: 300px;
+    height: 430px;
+    border-spacing: 0;
+    background-color: #33d1ca;
+    float: left;
+    padding: 5px;
+}
+
+.reduis{
+    border-radius: 15px;
+    transition-duration: .5s;
+}
+
+.reduis:hover{
+    transform: scale(1.1);
+}
+
+
+/*
+rgb(20,20,20) اسود اسود
+rgba(51,209,202,255) تيفاني
+#282a2d اسود رمادي
+*/
