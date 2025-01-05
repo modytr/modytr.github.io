@@ -1,0 +1,162 @@
+@font-face {
+	font-family: 'HeroFont';
+	src: url('ahmed/hero-2/HeroLight-Bold.otf') format('opentype'),
+	     url('ahmed/hero-2/HeroLight-Light.otf') format('opentype'),
+	     url('ahmed/hero-2/HeroLight-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+  body {
+      background-image: url(home-BG.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      margin: 0;
+      font-family: 'HeroFont', sans-serif;
+}
+
+
+
+
+    /* nav begin */
+  
+  .div1{
+        
+        width: 100%;
+        margin-bottom: 40px;
+       
+        
+        
+  }
+  
+  
+   
+  
+  .headerDiv {
+        width: 100%;
+        height: 70px;
+        border-spacing: 0;
+        
+        
+    }
+    
+    .optionsDiv {
+        float: inline-end;
+        width: 70%;
+        height: 50px;
+        padding-top: 25px;
+        padding-left: 30px;
+        color: #141414;
+    }
+    
+    .options {
+        color: white;
+        font-size: 23px;
+        text-decoration: none;
+        padding: 17px;
+        transition-duration: .5s;
+        font-weight: 500px;
+        
+    }
+    
+    .options:hover {
+        border-bottom: 2px solid white;
+       /*  border-bottom: 5px solid #33d1ca; */
+        
+        transform: scale(1.1);
+        
+        font-weight: bold;
+    }
+    
+    .sign {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        
+        background-color: rgba(51, 209, 202, 255);
+        border-radius: 15px;
+        padding: 9px 25px;
+        transition-duration: .5s;
+        
+        font-weight: 700;
+        
+        
+        
+    }
+    .joinBtn{
+        
+          width: 130px;
+          float: right;
+  
+    }
+    
+    .sign:hover {
+        background-color: #444444;
+        /* border: 3px solid #33d1ca; */
+        font-weight: bold;
+    }
+    
+    .logoDiv {
+        float: left;
+        width: 150px;
+        height: 60px;
+    }
+  
+    /* nav begin */
+
+
+  
+  .container {
+      width: 100%;
+      height: 100%;
+      
+      
+     margin-top: 110px;
+     /*  border: 1px solid red; */
+      text-align: center;
+  }
+
+  .container a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      margin: 30px;
+      text-align: center;
+      background-color: rgba(20, 20, 20, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      transition-duration: .5s;
+      box-shadow: 0 0 5px #eee, 0 0 5px #eee, 0 0 7px #eee, 0 0 9px #eee, 0 0 10px #eee, 0 0 10px #eee, 0 0 20px #eee;
+
+  }
+
+  .container a:hover{
+      background-color: rgba(51, 209, 202,0.8);
+      transform: scale(1.1);
+      padding: 15px;
+  }
+
+  .container h1{
+      color: white;
+      font-size: 120px;
+  }
+
+      
+.logoHome {
+      margin-bottom: 50px;
+      
+}
+.logoHome img {
+      height: 270px; 
+      width: 580px;
+      background-color: rgba(20, 20, 20, 0.3);
+      border-radius: 15px;
+      
+}
+
+     
