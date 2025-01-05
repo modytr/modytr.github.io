@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'HeroFont';
+    src: url('hero-2/HeroLight-Bold.otf') format('opentype'),
+        url('hero-2/HeroLight-Light.otf') format('opentype'),
+        url('hero-2/HeroLight-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.headerDiv {
+    width: 100%;
+    height: 70px;
+    border-spacing: 0;
+    background-color: #141414;
+}
+
+.optionsDiv {
+    float: inline-end;
+    width: 70%;
+    height: 50px;
+    padding-top: 25px;
+    padding-left: 30px;
+    color: #ffffff;
+}
+
+.options {
+    color: #ffffff;
+    font-size: 23px;
+    text-decoration: none;
+    padding: 17px;
+    transition-duration: .5s;
+    font-weight: 500px;
+    
+}
+
+.options:hover {
+    border-top: 5px solid #33d1ca;
+   /*  border-bottom: 5px solid #33d1ca; */
+    border-radius: 10px;
+    transform: scale(1.1);
+    color: #33d1ca;
+    font-weight: bold;
+}
+
+.sign {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+    background-color: rgba(51, 209, 202, 255);
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-top: 5px;
+    transition-duration: .5s;
+}
+
+.sign:hover {
+    background-color:#444547;
+}
+
+.logoDiv {
+    float: left;
+    width: 150px;
+    height: 60px;
+}
+/*Content section*/
+body {
+    background-color: #141414;
+    
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'HeroFont', sans-serif;
+}
+
+/* Layout with Flexbox */
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    margin: 20px;
+}
+
+/* Section Styles */
+.section {
+    display: flex;
+    justify-content: space-between; /* Creates space between the paragraph and image */
+    align-items: center; /* Vertically aligns the items */
+    margin-bottom: 40px; /* Space between sections */
+}
+
+/* Left Side */
+.left {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.left h1 {
+    color: #FFDAB9; /* Title color */
+    font-size: 2rem;
+    margin-bottom: 20px; /* Space between title and paragraph */
+}
+
+.left p {
+    color: #ffffff; /* Paragraph text color */
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Right Side */
+.right {
+    width: 30%;
+}
+
+.right img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: gives the image rounded corners */
+}
