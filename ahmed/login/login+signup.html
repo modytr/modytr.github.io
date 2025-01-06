@@ -4,6 +4,16 @@
 	<title>Sign Up</title>
 	<link rel="stylesheet" type="text/css" href="login+signup.css">
 	<link rel="icon" href="../logo.png" type="image/x-icon">
+	<script>
+		function validation() {
+		    var pass = document.querySelector('input[name="pass"]').value;
+		    if (pass.length < 8 || !/[a-z]/.test(pass) || !/[A-Z]/.test(pass) || !/[0-9]/.test(pass)) {
+			  alert("Password must be at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number");
+			  return false;
+		    }
+		    return true;
+		}
+	  </script>
 
 </head>
 <body>
@@ -13,13 +23,13 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form>
+				<form onsubmit="return validation()" action="">
 					
 					<label for="chk" aria-hidden="true" >Sign Up</label>
-					<input type="text" name="txt" placeholder="User name" required="">
-					<input type="email" name="email" placeholder="Email" required="">
-          				<input type="number" name="birth-year" placeholder="Birth Year" required="" min="1900" max="2024">
-					<input type="password" name="pass" placeholder="Password" required="">
+					<input type="text" name="txt" placeholder="User name" required>
+					<input type="email" name="email" placeholder="Email" required>
+          				<input type="number" name="birth-year" placeholder="Birth Year" required min="1900" max="2024">
+					<input type="password" name="pass" placeholder="Password" required>
 					<button>Sign Up</button>
 					<br>
 					<a href="../contactus/contact.html" id="help">Need Help?</a>
@@ -27,10 +37,10 @@
 			</div>
 
 			<div class="login">
-				<form>
+				<form action="../../azam/homePage.html">
 					<label for="chk" aria-hidden="true">Log In</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pass" placeholder="Password" required="">
+					<input type="email" name="email" placeholder="Email" required>
+					<input type="password" name="pass" placeholder="Password" required>
 					<button>Log In</button>
 					<br>
 					<a href="../contactus/contact.html" id="forgetPass">Forgot Password?</a>
@@ -44,5 +54,8 @@
         <p>&copy; 2025 Scene. All Rights Reserved.</p>
     </div>
     <!-- footer end-->
+
+
+ 
 </body>
 </html>
