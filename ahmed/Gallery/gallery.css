@@ -100,9 +100,9 @@ h2{
 
 
 img {
-      width: 200px; /* Set the desired width */
-      height: 150px; /* Set the desired height */
-      object-fit: contain; /* Ensures the image fits within the area without distortion */
+      width: 200px; 
+      height: 150px; 
+      object-fit: contain; 
       transition: transform 0.4s ease;
   }
 
@@ -111,23 +111,23 @@ img:hover{
 }
 
   .image-container {
-      display: flex; /* or grid, depending on your layout preference */
+      display: flex; 
       flex-wrap: wrap;
-      gap: 10px; /* Adjust spacing between images */
+      gap: 10px; 
       justify-content: center;
       gap: 5px;
       overflow: hidden;
   }
   
   .image-wrapper {
-      width: 340px; /* Set the desired width */
-      height: 350px; /* Set the desired height */
-      overflow: hidden; /* Hide overflow if images are larger */
-      border: 1px solid #141414; /* Add a border for better visibility */
+      width: 340px; 
+      height: 350px; 
+      overflow: hidden; 
+      border: 1px solid #141414; 
       border-radius: 5px;
       opacity: 1;
       visibility: visible;
-      transition: opacity 0.5s ease, visibility 0.5s ease; /* Add transition */
+      transition: opacity 0.5s ease, visibility 0.5s ease; 
       position: relative;
   }
  
@@ -135,7 +135,7 @@ img:hover{
   .image-wrapper img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensures the image covers the area without distortion */
+      object-fit: cover; 
   }
 
   .hidden {
@@ -352,8 +352,8 @@ img:hover{
 }
 
 .topBtnDiv {
-    position: fixed; /* Fixed position to stay in view */
-    bottom: 30px; /* Position from the bottom */
+    position: fixed; 
+    bottom: 30px; 
     right: 30px; 
     z-index: 900; 
     
