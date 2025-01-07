@@ -9,23 +9,309 @@
     <link rel="stylesheet" href="homePage.css">
     <link rel="stylesheet" href="footer.css">
 </head>
+<!--
+<script>
+    function mode() {
+        var x = document.getElementById("select").value;
+
+        if(x=="Light Mode"){
+            document.getElementById("headerDiv").style.backgroundColor="#33d1ca";
+            document.getElementById("bodyDiv").style.backgroundColor="#33d1ca";
+            document.getElementById("blueBg").style.display="inline";
+            document.getElementById("bg").style.backgroundColor="#141414";
+            document.getElementById("bg2").style.backgroundColor="#141414";
+            
+            document.getElementById("bg").addEventListener("mouseover" ,function(){
+                this.style.backgroundColor="white";
+                this.style.color="#222"
+            });
+            document.getElementById("bg").addEventListener("mouseout" ,function(){
+                this.style.backgroundColor="#141414";
+                this.style.color="white"
+            });
+            document.getElementById("bg2").addEventListener("mouseover" ,function(){
+                this.style.backgroundColor="white";
+                this.style.color="#222"
+            });
+            document.getElementById("bg2").addEventListener("mouseout" ,function(){
+                this.style.backgroundColor="#141414";
+                this.style.color="white"
+            });
+            document.getElementById("aBg").addEventListener("mouseover" ,function(){
+                this.style.backgroundColor="white";
+                this.style.color="#222"
+            });
+            document.getElementById("aBg").addEventListener("mouseout" ,function(){
+                this.style.backgroundColor="#33d1ca";
+                this.style.color="white"
+            });
+            document.getElementById("aBg1").addEventListener("mouseover" ,function(){
+                this.style.backgroundColor="white";
+                this.style.color="#222"
+            });
+            document.getElementById("aBg1").addEventListener("mouseout" ,function(){
+                this.style.backgroundColor="#33d1ca";
+                this.style.color="white"
+            });
+            document.getElementById("aBg2").addEventListener("mouseover" ,function(){
+                this.style.backgroundColor="white";
+                this.style.color="#222"
+            });
+            document.getElementById("aBg2").addEventListener("mouseout" ,function(){
+                this.style.backgroundColor="#33d1ca";
+                this.style.color="white"
+            });
+            document.getElementById("aBg3").addEventListener("mouseover" ,function(){
+                this.style.backgroundColor="white";
+                this.style.color="#222"
+            });
+            document.getElementById("aBg3").addEventListener("mouseout" ,function(){
+                this.style.backgroundColor="#33d1ca";
+                this.style.color="white"
+            });
+            document.getElementById("aBg4").addEventListener("mouseover" ,function(){
+                this.style.backgroundColor="white";
+                this.style.color="#222"
+            });
+            document.getElementById("aBg4").addEventListener("mouseout" ,function(){
+                this.style.backgroundColor="#33d1ca";
+                this.style.color="white"
+            });
+            
+        }
+        else{
+
+        }
+    }
+</script>
+-->
+
+<!--
+<script>
+    function mode() {
+        var x = document.getElementById("select").value;
+
+        if (x == "Light Mode") {
+            const headerDiv = document.getElementById("headerDiv");
+            const bodyDiv = document.getElementById("bodyDiv");
+            const filmsDiv = document.getElementById("filmsDiv");
+            const filmsDiv2 = document.getElementById("filmsDiv2");
+            const filmsDiv3 = document.getElementById("filmsDiv3");
+            const bgElements = [document.getElementById("bg"), document.getElementById("bg2")];
+            const linkElements = document.querySelectorAll("#aBg, #aBg1, #aBg2, #aBg3, #aBg4");
+
+            headerDiv.style.backgroundColor = "#33d1ca";
+            bodyDiv.style.backgroundColor = "#33d1ca";
+            filmsDiv.style.backgroundColor = "#33d1ca";
+            filmsDiv2.style.backgroundColor = "#33d1ca";
+            filmsDiv3.style.backgroundColor = "#33d1ca";
+            document.getElementById("blueBg").style.display = "inline";
+            document.getElementById("blackBg").style.display = "none";
+
+            bgElements.forEach(bg => {
+                bg.style.backgroundColor = "#141414";
+                bg.addEventListener("mouseover", function () {
+                    this.style.backgroundColor = "white";
+                    this.style.color = "#222";
+                });
+                bg.addEventListener("mouseout", function () {
+                    this.style.backgroundColor = "#141414";
+                    this.style.color = "white";
+                });
+            });
+
+            linkElements.forEach(link => {
+                link.style.backgroundColor = "#33d1ca";
+                link.addEventListener("mouseover", function () {
+                    this.style.backgroundColor = "white";
+                    this.style.color = "#222";
+                });
+                link.addEventListener("mouseout", function () {
+                    this.style.backgroundColor = "#33d1ca";
+                    this.style.color = "white";
+                });
+            });
+        }
+
+        else {
+            const headerDiv = document.getElementById("headerDiv");
+            const bodyDiv = document.getElementById("bodyDiv");
+            const filmsDiv = document.getElementById("filmsDiv");
+            const filmsDiv2 = document.getElementById("filmsDiv2");
+            const filmsDiv3 = document.getElementById("filmsDiv3");
+            const bgElements = [document.getElementById("bg"), document.getElementById("bg2")];
+            const linkElements = document.querySelectorAll("#aBg, #aBg1, #aBg2, #aBg3, #aBg4");
+            
+            headerDiv.style.backgroundColor = "";
+            bodyDiv.style.backgroundColor = "";
+            filmsDiv.style.backgroundColor = "";
+            filmsDiv2.style.backgroundColor = "";
+            filmsDiv3.style.backgroundColor = "";
+            document.getElementById("blackBg").style.display = "inline";
+            document.getElementById("blueBg").style.display = "none";
+
+            bgElements.forEach(bg => {
+                bg.style.backgroundColor = "";
+                bg.style.color = "";
+                bg.addEventListener("mouseover", function () {
+                    this.style.backgroundColor = "";
+                    this.style.color = "";
+                });
+                bg.addEventListener("mouseout", function () {
+                    this.style.backgroundColor = "";
+                    this.style.color = "";
+                });
+            });
+
+
+            linkElements.forEach(link => {
+                link.style.backgroundColor = "";
+                link.style.color = "";
+                link.addEventListener("mouseover", function () {
+                    this.style.backgroundColor = "";
+                    this.style.color = "";
+                });
+                link.addEventListener("mouseout", function () {
+                    this.style.backgroundColor = "";
+                    this.style.color = "";
+                });
+            });
+        }
+    }
+</script>
+-->
+
+<script>
+    function mode() {
+        var x = document.getElementById("select").value;
+
+        // Save the selected mode to localStorage
+        localStorage.setItem("selectedMode", x);
+
+        if (x == "Light Mode") {
+            applyLightMode();
+        } else {
+            applyDefaultMode();
+        }
+    }
+
+    function applyLightMode() {
+        const headerDiv = document.getElementById("headerDiv");
+        const bodyDiv = document.getElementById("bodyDiv");
+        const filmsDiv = document.getElementById("filmsDiv");
+        const filmsDiv2 = document.getElementById("filmsDiv2");
+        const filmsDiv3 = document.getElementById("filmsDiv3");
+        const bgElements = [document.getElementById("bg"), document.getElementById("bg2")];
+        const linkElements = document.querySelectorAll("#aBg, #aBg1, #aBg2, #aBg3, #aBg4");
+
+        headerDiv.style.backgroundColor = "#33d1ca";
+        bodyDiv.style.backgroundColor = "#33d1ca";
+        filmsDiv.style.backgroundColor = "#33d1ca";
+        filmsDiv2.style.backgroundColor = "#33d1ca";
+        filmsDiv3.style.backgroundColor = "#33d1ca";
+        document.getElementById("blueBg").style.display = "inline";
+        document.getElementById("blackBg").style.display = "none";
+
+        bgElements.forEach(bg => {
+            bg.style.backgroundColor = "#141414";
+            bg.addEventListener("mouseover", function () {
+                this.style.backgroundColor = "white";
+                this.style.color = "#222";
+            });
+            bg.addEventListener("mouseout", function () {
+                this.style.backgroundColor = "#141414";
+                this.style.color = "white";
+            });
+        });
+
+        linkElements.forEach(link => {
+            link.style.backgroundColor = "#33d1ca";
+            link.addEventListener("mouseover", function () {
+                this.style.backgroundColor = "white";
+                this.style.color = "#222";
+            });
+            link.addEventListener("mouseout", function () {
+                this.style.backgroundColor = "#33d1ca";
+                this.style.color = "white";
+            });
+        });
+    }
+
+    function applyDefaultMode() {
+        const headerDiv = document.getElementById("headerDiv");
+        const bodyDiv = document.getElementById("bodyDiv");
+        const filmsDiv = document.getElementById("filmsDiv");
+        const filmsDiv2 = document.getElementById("filmsDiv2");
+        const filmsDiv3 = document.getElementById("filmsDiv3");
+        const bgElements = [document.getElementById("bg"), document.getElementById("bg2")];
+        const linkElements = document.querySelectorAll("#aBg, #aBg1, #aBg2, #aBg3, #aBg4");
+
+        headerDiv.style.backgroundColor = "";
+        bodyDiv.style.backgroundColor = "";
+        filmsDiv.style.backgroundColor = "";
+        filmsDiv2.style.backgroundColor = "";
+        filmsDiv3.style.backgroundColor = "";
+        document.getElementById("blackBg").style.display = "inline";
+        document.getElementById("blueBg").style.display = "none";
+
+        bgElements.forEach(bg => {
+            bg.style.backgroundColor = "";
+            bg.style.color = "";
+            bg.addEventListener("mouseover", function () {
+                this.style.backgroundColor = "";
+                this.style.color = "";
+            });
+            bg.addEventListener("mouseout", function () {
+                this.style.backgroundColor = "";
+                this.style.color = "";
+            });
+        });
+
+        linkElements.forEach(link => {
+            link.style.backgroundColor = "";
+            link.style.color = "";
+            link.addEventListener("mouseover", function () {
+                this.style.backgroundColor = "";
+                this.style.color = "";
+            });
+            link.addEventListener("mouseout", function () {
+                this.style.backgroundColor = "";
+                this.style.color = "";
+            });
+        });
+    }
+
+    window.onload = function () {
+        const savedMode = localStorage.getItem("selectedMode");
+        if (savedMode === "Light Mode") {
+            applyLightMode();
+            document.getElementById("select").value = "Light Mode"; 
+        } else {
+            applyDefaultMode();
+            document.getElementById("select").value = "Default"; 
+        }
+    };
+</script>
+
 
 <body>
     <div class="div1">
-        <div class="headerDiv">
+        <div id="headerDiv">
             <div class="optionsDiv">
-                <a href="homePage.html" class="options">Home</a>|
-                <a href="../../ahmed/contactus/contact.html" class="options">Contact us</a>|
-                <a href="../Fadi/index.html" class="options">About us</a>|
-                <a href="../../ahmed/Gallery/gallery.html" class="options">Gallery</a>|
-                <a href="KidshomePage.html" class="options">Kids</a>
-                <a href="../../ahmed/login/login+signup.html" class="sign">login</a>
-                <a href="../../ahmed/login/login+signup.html" class="sign">sign-up</a>
+                <a href="homePage.html" id="aBg" class="options">Home</a>|
+                <a href="../../ahmed/contactus/contact.html" id="aBg1" class="options">Contact us</a>|
+                <a href="../Fadi/index.html" id="aBg2" class="options">About us</a>|
+                <a href="../../ahmed/Gallery/gallery.html" id="aBg3" class="options">Gallery</a>|
+                <a href="KidshomePage.html" id="aBg4" class="options">Kids</a>
+                <a href="../../ahmed/login/login+signup.html" id="bg" class="sign">sign-up</a>
+                <a href="../../ahmed/login/login+signup.html" id="bg2" class="sign">login</a>
             </div>
 
             <div class="logoDiv"><a href="homePage.html">
-                <img src="images/lastlogo.png" alt="" width="150px" height="60px">
-            </a>
+                    <img id="blackBg" src="images/lastlogo.png" alt="" width="150px" height="60px">
+                    <img style="display: none;" id="blueBg" src="kidsImages/logo-blue-background.png" alt=""
+                        width="150px" height="60px">
+                </a>
             </div>
         </div>
 
@@ -38,334 +324,339 @@
         </div>
 
         <div class="bodyDiv">
-            <select class="select">
-                <option>Arabic Films</option>
-                <option><a href="actionArabic.html">Action</a></option>
-                <option>drama</option>
-            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <select class="select">
-                <option>Films</option>
-                <option>ِAction</option>
-                <option>drama</option>
-                <option>Horror</option>
-            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="select" type="search" placeholder="Search here..." size="35">
-        </div>
-
-        <div class="emptyDiv">
-            <h3 class="h3">New Films Watch it now</h3>
-        </div>
-
-        <div class="interfaceImageDiv2">
-            <div class="inImageDiv2">
-                <h2 class="inImage2">almashi now in</h2>
-                <h2><span class="inImageSpan2">Scene</span>
-                </h2>
-                <a href="product.html" class="inImagesign2">Watch now</a>
+            <div id="bodyDiv">
+                <select name="color" id="select" onchange="mode()">
+                    <option value="Dark Mode">Dark Mode</option>
+                    <option value="Light Mode">Light Mode</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="select" type="search" placeholder="Search here..." size="35">
             </div>
-        </div>
 
-        <div class="filmsDiv">
-            <div class="moveDiv">
-                <div class="imagesDiv">
-                    <a href="product.html">
-                        <img class="reduis" src="images/film2.jpg" alt="" width="265px" height="430px">
-                    </a><br><br>
-                    <a href="product.html" class="p">ابو نسب</a>
-                </div>
-                <div class="imagesDiv">
-                    <a href="product.html">
-                        <img class="reduis" src="images/film6.jpg" alt="" width="265px" height="430px">
-                    </a><br><br>
-                    <a href="product.html" class="p">قرمط بيتمرمط</a>
-                </div>
-                <div class="imagesDiv">
-                    <a href="product.html">
-                        <img class="reduis" src="images/film4.jpg" alt="" width="265px" height="430px">
-                    </a><br><br>
-                    <a href="" class="p">العميل صفر</a>
-                </div>
-                <div class="imagesDiv">
-                    <a href="product.html">
-                        <img class="reduis" src="images/film5.jpg" alt="" width="265px" height="430px">
-                    </a><br><br>
-                    <a href="product.html" class="p">هارلي</a>
-                </div>
-                <div class="imagesDiv">
-                    <a href="">
-                        <img class="reduis" src="images/film7.jpg" alt="" width="265px" height="430px">
-                    </a><br><br>
-                    <a href="product.html" class="p">اصل الحكاية</a>
+            <div class="emptyDiv">
+                <h3 class="h3">New Films Watch it now</h3>
+            </div>
+
+            <div class="interfaceImageDiv2">
+                <div class="inImageDiv2">
+                    <h2 class="inImage2">almashi now in</h2>
+                    <h2><span class="inImageSpan2">Scene</span>
+                    </h2>
+                    <a href="product.html" class="inImagesign2">Watch now</a>
                 </div>
             </div>
-        </div>
 
-        <div class="emptyDiv">
-            <div style="width: 350px; float: left; height: 70px;">
-                <h3 class="h3">Egyption movies</h3>
-            </div>
-            <div class="movieOptionsDiv">
-                <div style="margin-top: 25px;">
-                    <a href="actionArabic.html" class="movieOptions">action</a>
-                    <a href="actionArabic.html" class="movieOptions">drama</a>
-                    <a href="actionArabic.html" class="movieOptions">comedy</a>
-                    <a href="actionArabic.html" class="movieOptions">horror</a>
-                    <a href="actionArabic.html" class="movieOptions">Romance</a>
-                    <a href="actionArabic.html" class="movieOptions">history</a>
-                    <a href="actionArabic.html" class="movieOptions">fantasy</a>
-                    <a href="actionArabic.html" class="movieOptions">Sci-fi</a>
-                    <a href="actionArabic.html" class="movieOptions">documentary</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="filmsDiv2">
-            <div class="moveDiv2">
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub1.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub2.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub3.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub4.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub5.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub6.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub7.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub8.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub9.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub10.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub11.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub12.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub13.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub14.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/sub15.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="emptyDiv">
-            <div style="width: 350px; float: left; height: 70px;">
-                <h3 class="h3">movies</h3>
-            </div>
-            <div class="movieOptionsDiv">
-                <div style="margin-top: 25px;">
-                    <a href="actionArabic.html" class="movieOptions">action</a>
-                    <a href="actionArabic.html" class="movieOptions">drama</a>
-                    <a href="actionArabic.html" class="movieOptions">comedy</a>
-                    <a href="actionArabic.html" class="movieOptions">horror</a>
-                    <a href="actionArabic.html" class="movieOptions">Romance</a>
-                    <a href="actionArabic.html" class="movieOptions">history</a>
-                    <a href="actionArabic.html" class="movieOptions">fantasy</a>
-                    <a href="actionArabic.html" class="movieOptions">Sci-fi</a>
-                    <a href="actionArabic.html" class="movieOptions">documentary</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="filmsDiv2">
-            <div class="moveDiv2">
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo1.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo2.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo3.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo4.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo5.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo6.png" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo7.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo8.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo9.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo10.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo11.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo12.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo13.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo14.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-                <div class="imagesDiv2">
-                    <a href="product.html">
-                        <img class="reduis2" src="images/imageMovies/mo15.jpg" alt="" width="250px" height="330px">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="emptyDiv"></div>
-
-
-        <footer>
-            <div class="emptyDiv2Footer">
-                <div class="moveDiv2Footer">
-                    <div class="lastDivFooter">
-                        <div class="bigDivFooter">
-                            <div class="footerLogoDivFooter"><img class="footerLogoFooter" src="images/lastlogo.png"
-                                    alt="">
-                            </div>
-                            <div class="imageDivFooter"><img class="img1Footer" src="images/icons/paper-plane.png"
-                                    alt="">
-                            </div>
-                            <div class="imageDivRFooter">
-                                <p style="font-size: 10px;">: info.sceneMovies@gmail.com</p>
-                            </div>
-                            <div class="imageDivFooter"><img class="img1Footer" src="images/icons/logo.png" alt="">
-                            </div>
-                            <div class="imageDivRFooter">
-                                <p style="font-size: 10px;">: +962 79 999 9999</p>
-                            </div>
-                            <div class="imageDivFooter"><img class="img1Footer" src="images/icons/instagram.png" alt="">
-                            </div>
-                            <div class="imageDivRFooter">
-                                <p style="font-size: 10px;">: sceneMovies</p>
-                            </div>
-                        </div>
+            <div id="filmsDiv">
+                <div class="moveDiv">
+                    <div class="imagesDiv">
+                        <a href="product.html">
+                            <img class="reduis" src="images/film2.jpg" alt="" width="265px" height="430px">
+                        </a><br><br>
+                        <a href="product.html" class="p">ابو نسب</a>
                     </div>
-                    <div class="lastDivFooter">
-                        <div class="bigDivFooter">
-                            <div class="footerOptionsDivFooter">
-                                <a href="homePage.html" class="footerOptionsFooter">home</a>
-                                <a href="../Fadi/index.html" style="font-size: 16px;" class="footerOptionsFooter">about&nbsp;us</a>
-                                <a href="../../ahmed/Gallery/gallery.html" style="font-size: 16px;" class="footerOptionsFooter">gallery</a>
-                                <a href="../../ahmed/contactus/contact.html" style="font-size: 16px;" class="footerOptionsFooter">contact&nbsp;us</a>
-                                <a href="../Fadi/faq.html" style="font-size: 16px;" class="footerOptionsFooter">FAQ</a>
-                            </div>
-                            <div class="footerOptionsDivRFooter">
-                                <a href="../Fadi/blog.html" style="font-size: 16px;" class="footerOptionsFooter">blog</a>
-                                <a href="../../ahmed/Gallery/gallery.html" style="font-size: 16px;" class="footerOptionsFooter">case&nbsp;study</a>
-                                <a style="font-size: 16px;" href="../../ahmed/login/login+signup.html" class="footerOptionsFooter">join&nbsp;us</a>
-                                <a style="font-size: 16px;" href="KidshomePage.css" class="footerOptionsFooter">kids</a>
-                                <a style="font-size: 16px;" href="../../ahmed/contactus/contact.html" class="footerOptionsFooter">policy</a>
-                            </div>
-                        </div>
+                    <div class="imagesDiv">
+                        <a href="product.html">
+                            <img class="reduis" src="images/film6.jpg" alt="" width="265px" height="430px">
+                        </a><br><br>
+                        <a href="product.html" class="p">قرمط بيتمرمط</a>
                     </div>
-
-                    <div style="width: 300px; height: 250px; float: left;">
-                        <div style="width: 290px; height: 80px;">
-                            <h2 class="h2Footer">Subscribe Now !</h2>
-                        </div>
-                        <div style="width: 290px; height: 140px;">
-                            <p style="color: #33d1ca; font-size: 12px; ">Don’t miss to subscribe to get our new movies
-                            </p>
-                            <div style="width: 290px; height: 50px;">
-                                <form action="">
-                                    <input type="text" placeholder="Email Address..."
-                                        style="padding-right: 95px; padding-top: 15px; padding-bottom: 16px; ">
-                                    <div style="width: 290; height: 50px;">
-                                        <input type="submit" value="Send" class="submitFooter">
-                                </form>
-                            </div>
-                        </div>
+                    <div class="imagesDiv">
+                        <a href="product.html">
+                            <img class="reduis" src="images/film4.jpg" alt="" width="265px" height="430px">
+                        </a><br><br>
+                        <a href="" class="p">العميل صفر</a>
+                    </div>
+                    <div class="imagesDiv">
+                        <a href="product.html">
+                            <img class="reduis" src="images/film5.jpg" alt="" width="265px" height="430px">
+                        </a><br><br>
+                        <a href="product.html" class="p">هارلي</a>
+                    </div>
+                    <div class="imagesDiv">
+                        <a href="">
+                            <img class="reduis" src="images/film7.jpg" alt="" width="265px" height="430px">
+                        </a><br><br>
+                        <a href="product.html" class="p">اصل الحكاية</a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <div class="emptyDiv"></div>
+
+            <div class="emptyDiv">
+                <div style="width: 350px; float: left; height: 70px;">
+                    <h3 class="h3">Egyption movies</h3>
+                </div>
+                <div class="movieOptionsDiv">
+                    <div style="margin-top: 25px;">
+                        <a href="actionArabic.html" id="" class="movieOptions">action</a>
+                        <a href="actionArabic.html" id="" class="movieOptions">drama</a>
+                        <a href="actionArabic.html" id="" class="movieOptions">comedy</a>
+                        <a href="actionArabic.html" id="" class="movieOptions">horror</a>
+                        <a href="actionArabic.html" id="" class="movieOptions">Romance</a>
+                        <a href="actionArabic.html" id="" class="movieOptions">history</a>
+                        <a href="actionArabic.html" id="" class="movieOptions">fantasy</a>
+                        <a href="actionArabic.html" id="" class="movieOptions">Sci-fi</a>
+                        <a href="actionArabic.html" id="" class="movieOptions">documentary</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="filmsDiv2">
+                <div class="moveDiv2">
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub1.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub2.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub3.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub4.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub5.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub6.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub7.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub8.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub9.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub10.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub11.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub12.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub13.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub14.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/sub15.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="emptyDiv">
+                <div style="width: 350px; float: left; height: 70px;">
+                    <h3 class="h3">movies</h3>
+                </div>
+                <div class="movieOptionsDiv">
+                    <div style="margin-top: 25px;">
+                        <a href="actionArabic.html" class="movieOptions">action</a>
+                        <a href="actionArabic.html" class="movieOptions">drama</a>
+                        <a href="actionArabic.html" class="movieOptions">comedy</a>
+                        <a href="actionArabic.html" class="movieOptions">horror</a>
+                        <a href="actionArabic.html" class="movieOptions">Romance</a>
+                        <a href="actionArabic.html" class="movieOptions">history</a>
+                        <a href="actionArabic.html" class="movieOptions">fantasy</a>
+                        <a href="actionArabic.html" class="movieOptions">Sci-fi</a>
+                        <a href="actionArabic.html" class="movieOptions">documentary</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="filmsDiv3">
+                <div class="moveDiv2">
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo1.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo2.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo3.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo4.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo5.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo6.png" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo7.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo8.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo9.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo10.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo11.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo12.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo13.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo14.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                    <div class="imagesDiv2">
+                        <a href="product.html">
+                            <img class="reduis2" src="images/imageMovies/mo15.jpg" alt="" width="250px" height="330px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="emptyDiv"></div>
+
+
+            <footer>
+                <div class="emptyDiv2Footer">
+                    <div class="moveDiv2Footer">
+                        <div class="lastDivFooter">
+                            <div class="bigDivFooter">
+                                <div class="footerLogoDivFooter"><img class="footerLogoFooter" src="images/lastlogo.png"
+                                        alt="">
+                                </div>
+                                <div class="imageDivFooter"><img class="img1Footer" src="images/icons/paper-plane.png"
+                                        alt="">
+                                </div>
+                                <div class="imageDivRFooter">
+                                    <p style="font-size: 10px;">: info.sceneMovies@gmail.com</p>
+                                </div>
+                                <div class="imageDivFooter"><img class="img1Footer" src="images/icons/logo.png" alt="">
+                                </div>
+                                <div class="imageDivRFooter">
+                                    <p style="font-size: 10px;">: +962 79 999 9999</p>
+                                </div>
+                                <div class="imageDivFooter"><img class="img1Footer" src="images/icons/instagram.png"
+                                        alt="">
+                                </div>
+                                <div class="imageDivRFooter">
+                                    <p style="font-size: 10px;">: sceneMovies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lastDivFooter">
+                            <div class="bigDivFooter">
+                                <div class="footerOptionsDivFooter">
+                                    <a href="homePage.html" class="footerOptionsFooter">home</a>
+                                    <a href="../Fadi/index.html" style="font-size: 16px;"
+                                        class="footerOptionsFooter">about&nbsp;us</a>
+                                    <a href="../../ahmed/Gallery/gallery.html" style="font-size: 16px;"
+                                        class="footerOptionsFooter">gallery</a>
+                                    <a href="../../ahmed/contactus/contact.html" style="font-size: 16px;"
+                                        class="footerOptionsFooter">contact&nbsp;us</a>
+                                    <a href="../Fadi/faq.html" style="font-size: 16px;"
+                                        class="footerOptionsFooter">FAQ</a>
+                                </div>
+                                <div class="footerOptionsDivRFooter">
+                                    <a href="../Fadi/blog.html" style="font-size: 16px;"
+                                        class="footerOptionsFooter">blog</a>
+                                    <a href="../../ahmed/Gallery/gallery.html" style="font-size: 16px;"
+                                        class="footerOptionsFooter">case&nbsp;study</a>
+                                    <a style="font-size: 16px;" href="../../ahmed/login/login+signup.html"
+                                        class="footerOptionsFooter">join&nbsp;us</a>
+                                    <a style="font-size: 16px;" href="KidshomePage.css"
+                                        class="footerOptionsFooter">kids</a>
+                                    <a style="font-size: 16px;" href="../../ahmed/contactus/contact.html"
+                                        class="footerOptionsFooter">policy</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="width: 300px; height: 250px; float: left;">
+                            <div style="width: 290px; height: 80px;">
+                                <h2 class="h2Footer">Subscribe Now !</h2>
+                            </div>
+                            <div style="width: 290px; height: 140px;">
+                                <p style="color: #33d1ca; font-size: 12px; ">Don’t miss to subscribe to get our new
+                                    movies
+                                </p>
+                                <div style="width: 290px; height: 50px;">
+                                    <form action="">
+                                        <input type="text" placeholder="Email Address..."
+                                            style="padding-right: 95px; padding-top: 15px; padding-bottom: 16px; ">
+                                        <div style="width: 290; height: 50px;">
+                                            <input type="submit" value="Send" class="submitFooter">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="emptyDiv"></div>
 </body>
 
 </html>
